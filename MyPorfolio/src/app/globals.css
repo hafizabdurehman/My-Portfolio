@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/globals.css */
+
+/* Glowing Button Animation */
+@keyframes glowing {
+    0% {
+      box-shadow: 0 0 8px 0 rgba(255, 0, 0, 0.3), 
+                  0 0 16px 0 rgba(255, 115, 0, 0.3), 
+                  0 0 24px 0 rgba(255, 251, 0, 0.3),
+                  0 0 32px 0 rgba(72, 255, 0, 0.3),
+                  0 0 40px 0 rgba(0, 255, 213, 0.3),
+                  0 0 48px 0 rgba(0, 43, 255, 0.3),
+                  0 0 56px 0 rgba(255, 0, 200, 0.3);
+      background-color: #2d3748; /* Dark background */
+    }
+    25% {
+      box-shadow: 0 0 8px 0 rgba(255, 0, 0, 0.4), 
+                  0 0 16px 0 rgba(255, 115, 0, 0.4), 
+                  0 0 24px 0 rgba(255, 251, 0, 0.4),
+                  0 0 32px 0 rgba(72, 255, 0, 0.4),
+                  0 0 40px 0 rgba(0, 255, 213, 0.4),
+                  0 0 48px 0 rgba(0, 43, 255, 0.4),
+                  0 0 56px 0 rgba(255, 0, 200, 0.4);
+      background-color: #2b3e50; /* Slightly darker background */
+    }
+    50% {
+      box-shadow: 0 0 8px 0 rgba(255, 0, 0, 0.5), 
+                  0 0 16px 0 rgba(255, 115, 0, 0.5), 
+                  0 0 24px 0 rgba(255, 251, 0, 0.5),
+                  0 0 32px 0 rgba(72, 255, 0, 0.5),
+                  0 0 40px 0 rgba(0, 255, 213, 0.5),
+                  0 0 48px 0 rgba(0, 43, 255, 0.5),
+                  0 0 56px 0 rgba(255, 0, 200, 0.5);
+      background-color: #2c3e4f; /* Darker background */
+    }
+    75% {
+      box-shadow: 0 0 8px 0 rgba(255, 0, 0, 0.4), 
+                  0 0 16px 0 rgba(255, 115, 0, 0.4), 
+                  0 0 24px 0 rgba(255, 251, 0, 0.4),
+                  0 0 32px 0 rgba(72, 255, 0, 0.4),
+                  0 0 40px 0 rgba(0, 255, 213, 0.4),
+                  0 0 48px 0 rgba(0, 43, 255, 0.4),
+                  0 0 56px 0 rgba(255, 0, 200, 0.4);
+      background-color: #2d3748; /* Reset background */
+    }
+    100% {
+      box-shadow: 0 0 8px 0 rgba(255, 0, 0, 0.3), 
+                  0 0 16px 0 rgba(255, 115, 0, 0.3), 
+                  0 0 24px 0 rgba(255, 251, 0, 0.3),
+                  0 0 32px 0 rgba(72, 255, 0, 0.3),
+                  0 0 40px 0 rgba(0, 255, 213, 0.3),
+                  0 0 48px 0 rgba(0, 43, 255, 0.3),
+                  0 0 56px 0 rgba(255, 0, 200, 0.3);
+      background-color: #2d3748; /* Reset background */
+    }
+  }
+  
+  /* Glowing Button Class */
+  .glowing-btn {
+    position: relative;
+    animation: glowing 3s infinite ease-in-out;
+    color: white;
+    background-color: #2d3748; /* Dark background color */
+    border: none; /* No border */
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .glowing-btn:hover {
+    background-color: #1a202c; /* Darker gray on hover */
+    box-shadow: 0 0 18px 6px rgba(255, 0, 0, 0.6), 
+                0 0 24px 6px rgba(255, 115, 0, 0.6), 
+                0 0 30px 6px rgba(255, 251, 0, 0.6), 
+                0 0 36px 6px rgba(72, 255, 0, 0.6), 
+                0 0 42px 6px rgba(0, 255, 213, 0.6), 
+                0 0 48px 6px rgba(0, 43, 255, 0.6),
+                0 0 54px 6px rgba(255, 0, 200, 0.6);
+    transform: scale(1.05); /* Slightly increase button size on hover */
+  }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+  
